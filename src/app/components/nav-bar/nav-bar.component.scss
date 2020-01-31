@@ -1,0 +1,18 @@
+.nav {
+    background-color: #ffffff;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.nav-title {
+    flex-grow: 3;
+    text-align: center;
+}
+
+.nav-user {
+    // flex: auto;s
+    margin-right: 50px;
+}

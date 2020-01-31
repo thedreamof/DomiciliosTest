@@ -1,0 +1,97 @@
+<div *ngFor="let estado of estados">
+    <div class="card">
+    
+        <div class="estados">
+            <div class="estados-img">
+                <img src="./assets/images/user-image.png" alt="" width="50" height="50">
+            </div>
+            <div class="estados-content">
+    
+                <div class="estados-user">
+                    <h2 class="color-primary">{{ estado.usuario.name }}</h2>
+                    <span class="color-gray">{{ estado.fecha }}</span>
+                </div>
+        
+                <p class="estado-description">
+                    {{ estado.descripcion }}
+                </p>
+    
+
+                <div class="reaccionMenuBar" *ngIf="reaccionMenu && estado.id === estadoActual.id ">
+                    <ul class="reaccionMenu">
+                        <li (click)="reaccion(1)"><div class="reaccion-azul"></div>Me gusta</li>
+                        <li (click)="reaccion(2)"><div class="reaccion-roja"></div>Me sorprende</li>
+                        <li (click)="reaccion(3)"><div class="reaccion-amarilla"></div>Me divierte</li>
+                    </ul>
+                </div>
+
+                <div class="estados-btns ocultar-m">
+                    <input class="button button-primary" (click)="reaccionar( estado )" type="button" value="Reaccionar">
+                    <input class="button button-primary" (click)="comentar(estado)" type="button" value="Comentar">
+                </div>
+
+                
+        
+            </div>
+    
+            <div class="estados-detalles">
+                <div class="reacciones">
+                    <div *ngFor="let reaccion of estado.reacciones" 
+                        [ngClass]="{
+                        'reaccion-azul': reaccion.id === 1 && reaccion.cantidad > 0 ,
+                        'reaccion-roja': reaccion.id === 2 && reaccion.cantidad > 0 ,
+                        'reaccion-amarilla': reaccion.id === 3 && reaccion.cantidad > 0 
+                        }">
+                    </div>
+                    <span>&nbsp;&nbsp; {{ contarReacciones(estado.reacciones) }}</span>
+                </div>
+            
+                <div class="num-comentarios">
+                    <p>
+                        <span *ngIf="estado.comentarios"> {{ estado.comentarios.length }}</span>
+                        Comentarios
+                    </p>
+                </div>
+            </div>
+    
+            <div class="estados-btns ocultar">
+                <input class="button button-primary" (click)="reaccionar( estado )" type="button" value="Reaccionar">
+                <input class="button button-primary" (click)="comentar(estado)" type="button" value="Comentar">
+            </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="comentarios" *ngIf="mostrarComentarios && estadoActual.usuario.id == estado.usuario.id && estado.id == estadoActual.id ">
+    
+        <div class="comentario" *ngFor="let comentario of estado.comentarios">
+            
+            <div class="comentario-img">
+                <img src="./assets/images/user-image.png" alt="" width="50" height="50">
+            </div>
+    
+            <div class="comentario-content">
+    
+                <div class="comentario-user">
+                    <p>
+                        <span class="color-primary">
+                            <strong>{{ comentario.usuario.name }}</strong>
+                        </span>
+                        &nbsp; {{ comentario.descripcion }}
+                    </p>
+                    <span class="color-gray">{{ comentario.fecha }}</span>
+                </div>
+                
+            </div>
+    
+        </div>
+    
+        <div class="comentario-text">
+            <form #formComentario="ngForm" (ngSubmit)="onSubmit( formComentario )">
+                <input class="button button-primary" #comentario="ngModel" name="descripcion" [(ngModel)]="comenta.descripcion" type="text" placeholder="Escribe un comentario">
+            </form>
+        </div>
+    
+    </div>
+</div>

@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif
+}
+
+
+.card {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+}
+
+.color-primary {
+    color: #68BC93;
+}
+
+.color-gray {
+    color: gray;
+}

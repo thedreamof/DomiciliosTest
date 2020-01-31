@@ -1,0 +1,19 @@
+
+<form #formEstado="ngForm" (ngSubmit)="onSubmit(formEstado.value)">
+    <div class="card">
+
+        <div class="estado">
+            <div class="estado-text">
+                <input type="text" #descripcion="ngModel" name="descripcion" [(ngModel)]="estado.descripcion" placeholder="Escribe aquí tú estado" required>
+            </div>
+
+            <div class="estado-btn">
+                <div class="btn btn-primary">
+                    <input type="submit" value="Publicar" [disabled]="formEstado.invalid">
+                </div>
+            </div>        
+            
+        </div>
+        
+    </div>
+</form>

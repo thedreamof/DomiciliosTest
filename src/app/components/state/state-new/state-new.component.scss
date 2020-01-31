@@ -1,0 +1,44 @@
+.estado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.estado-text input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    // border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  ::placeholder {
+    color: #68BC93;
+  }
+
+  .estado-btn {
+      align-self: flex-end;
+      margin-right: 5px;
+  }
+
+
+
+  .btn input[type=button], input[type=submit], input[type=reset] {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 8px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .btn input[type=button], input[type=submit], input[type=reset] .btn-primary {
+      background-color: #2DCB70;
+  }
+
+  
