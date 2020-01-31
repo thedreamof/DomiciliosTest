@@ -1,0 +1,31 @@
+<div class="comentarios">
+    
+    <div class="comentario" *ngFor="let coment of estado.comentarios">
+        
+        <div class="comentario-img">
+            <img src="./assets/images/user-image.png" alt="" width="50" height="50">
+        </div>
+
+        <div class="comentario-content">
+
+            <div class="comentario-user">
+                <p>
+                    <span class="color-primary">
+                        <strong>{{ coment.usuario.name }}</strong>
+                    </span>
+                    &nbsp; {{ coment.descripcion }}
+                </p>
+                <span class="color-gray">{{ coment.fecha }}</span>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="comentario-text">
+        <form #formComentario="ngForm" (ngSubmit)="onSubmit( formComentario.value )">
+            <input class="button button-primary" #descripcion="ngModel" name="descripcion" [(ngModel)]="comentario.descripcion" type="text" placeholder="Escribe un comentario">
+        </form>
+    </div>
+
+</div>

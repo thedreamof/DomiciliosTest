@@ -16,7 +16,6 @@ export class StateListComponent implements OnInit {
   mostrarComentarios = false;
   estados;
   estadoActual;
-  comenta: Comentario;
 
   reaccionMenu = false;
 
@@ -42,31 +41,11 @@ export class StateListComponent implements OnInit {
   comentar( estado ) {
     this.estadoActual = estado;
     this.mostrarComentarios = !this.mostrarComentarios;
-
-    this.comenta = {
-      id: this.generaId( 100, 200 ),
-      descripcion: '',
-      fecha: new Date().toLocaleString(),
-      usuario: this.usuarioActual
-    };
   }
 
-  addComentario( comentario) {
-    console.log( comentario );
-  }
-
-  onSubmit( comentario ) {
-    this.estadoService.addComentario( this.estadoActual.id, this.comenta );
-    this.comenta = {
-      id: this.generaId( 100, 1000 ),
-      descripcion: '',
-      fecha: new Date().toLocaleString(),
-      usuario: this.usuarioActual
-    };
-  }
-
-  private generaId(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
+  addComentario( estado, comentario: Comentario) {
+    console.log( 'aqui', estado, comentario );
+    this.estadoService.addComentario( estado, comentario );
   }
 
   reaccionar( estado ) {

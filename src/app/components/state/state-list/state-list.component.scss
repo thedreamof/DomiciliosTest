@@ -67,10 +67,6 @@ $height: 30px;
             // background-color: green;
         }
 
-        // .comentarios span {
-        //     text-align: right;
-        // }
-
 .reaccion-azul {
     width: $width;
     height: $height;
@@ -124,52 +120,52 @@ $height: 30px;
 }
 
 
-.comentarios {
-    margin-top: -10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #F1F1F1;
-    display: flex;
-    flex-direction: column;
-}
+// .comentarios {
+//     margin-top: -10px;
+//     padding: 10px;
+//     margin-bottom: 20px;
+//     background-color: #F1F1F1;
+//     display: flex;
+//     flex-direction: column;
+// }
 
-    .comentario {
-        padding-top: 15px;
-        display: flex;
-        flex-wrap: wrap;
-        // flex-direction: column;
-    }
+//     .comentario {
+//         padding-top: 15px;
+//         display: flex;
+//         flex-wrap: wrap;
+//         // flex-direction: column;
+//     }
 
-        .comentario-img {
-            padding: 0 20px;
-            width: 100px;
-        }
+//         .comentario-img {
+//             padding: 0 20px;
+//             width: 100px;
+//         }
 
 
-        .comentario-content {
-            flex: 1 1 60%;
-            display: flex;
-            flex-direction: column;
-        }
+//         .comentario-content {
+//             flex: 1 1 60%;
+//             display: flex;
+//             flex-direction: column;
+//         }
 
-            .comentario-user {
-                flex: 1 1 auto;
-                padding-top: 10px;
-            }
+//             .comentario-user {
+//                 flex: 1 1 auto;
+//                 padding-top: 10px;
+//             }
 
-    .comentario-text {
-        padding: 10px;
-        margin-top: 30px;
-        // background-color: red;
+//     .comentario-text {
+//         padding: 10px;
+//         margin-top: 30px;
+//         // background-color: red;
 
-        input {
-            display: block;
-            border: 1px solid #cccccc;
-            height: 50px;
-            width: 100%;
-            font-size: 16px;
-        }
-    }
+//         input {
+//             display: block;
+//             border: 1px solid #cccccc;
+//             height: 50px;
+//             width: 100%;
+//             font-size: 16px;
+//         }
+//     }
 
 .ocultar {
     display: none;

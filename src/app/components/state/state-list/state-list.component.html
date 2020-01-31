@@ -62,8 +62,16 @@
         </div>
         
     </div>
+
+    <app-comentario *ngIf="mostrarComentarios && 
+                    estadoActual.usuario.id == estado.usuario.id &&
+                    estado.id == estadoActual.id "
+                    [estado]="estado"
+                    [usuarioActual]="usuarioActual"
+                    (envComentario)="addComentario(estado.id, $event)">
+    </app-comentario>
     
-    <div class="comentarios" *ngIf="mostrarComentarios && estadoActual.usuario.id == estado.usuario.id && estado.id == estadoActual.id ">
+    <!-- <div class="comentarios" *ngIf="mostrarComentarios && estadoActual.usuario.id == estado.usuario.id && estado.id == estadoActual.id ">
     
         <div class="comentario" *ngFor="let comentario of estado.comentarios">
             
@@ -93,5 +101,5 @@
             </form>
         </div>
     
-    </div>
+    </div> -->
 </div>

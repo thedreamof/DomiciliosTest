@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { StateComponent } from './components/state/state.component';
 import { StateNewComponent } from './components/state/state-new/state-new.component';
 import { StateListComponent } from './components/state/state-list/state-list.component';
+import { ComentarioComponent } from './components/comentario/comentario.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StateListComponent } from './components/state/state-list/state-list.com
     NavBarComponent,
     StateComponent,
     StateNewComponent,
-    StateListComponent
+    StateListComponent,
+    ComentarioComponent
   ],
   imports: [
     BrowserModule,
