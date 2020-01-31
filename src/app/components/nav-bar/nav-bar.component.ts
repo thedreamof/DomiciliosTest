@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../interfaces/user';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  titulo = 'Domicilios Test';
+  usuario: User;
+
+  constructor( private usuarioService: UsuarioService ) { }
 
   ngOnInit() {
+    this.usuario =  this.usuarioService.getUsuarioActual();
   }
 
 }

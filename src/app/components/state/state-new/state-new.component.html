@@ -1,8 +1,8 @@
 
 <form #formEstado="ngForm" (ngSubmit)="onSubmit(formEstado.value)">
-    <div class="card">
+    <section class="card">
 
-        <div class="estado">
+        <article class="estado">
             <div class="estado-text">
                 <input type="text" #descripcion="ngModel" name="descripcion" [(ngModel)]="estado.descripcion" placeholder="Escribe aquí tú estado" required>
             </div>
@@ -13,7 +13,7 @@
                 </div>
             </div>        
             
-        </div>
+        </article>
         
-    </div>
+    </section>
 </form>

@@ -63,9 +63,6 @@ export class StateListComponent implements OnInit {
       fecha: new Date().toLocaleString(),
       usuario: this.usuarioActual
     };
-
-    // this.estados =  this.estadoService.getEstados();
-    // console.log( this.estadoActual.id, this.comenta );
   }
 
   private generaId(min, max) {
